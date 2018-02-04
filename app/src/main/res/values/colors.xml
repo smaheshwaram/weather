@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2686c6</color>
+    <color name="colorPrimaryDark">#1a72ae</color>
+    <color name="colorAccent">#5c82b9</color>
+    <color name="actionBarColor">#5c82b9</color>
+
+    <color name="dayPrimaryColor">#5a84c1</color>
+    <color name="dayHighlightColor">#618cca</color>
+    <color name="dayAccentColor">#ffffff</color>
+
+    <color name="nightPrimaryColor">#40454b</color>
+    <color name="nightHighlightColor">#474c53</color>
+    <color name="nightAccentColor">#beffffff</color>
+
+    <color name="widgetPrimaryTextColorGrey">#f2545d70</color>
+    <color name="widgetPrimaryBackground">#f2efefef</color>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="tutorialButtonFinishText">¡Vamonos!</string>
+    <string name="tutorialNextText">Siguiente</string>
+    <string name="tutorialText1">Toque en cualquier parte de la mitad inferior del widget para alternar entre información útil, como las previsiones por hora, las condiciones actuales detalladas y los pronósticos de 5 días.</string>
+    <string name="tutorialText2">Toque en cualquier parte de la mitad superior del widget para actualizarlo en cualquier momento que desee. El widget se puede configurar para que se actualice automáticamente a través de la configuración.</string>
+    <string name="tutorialText3">En cualquier momento, puntee en el icono de rueda dentada en la esquina superior derecha del widget para cambiar varios ajustes, como su ubicación, tipos de unidad e iconos.</string>
+    <string name="tutorialText4">Gracias por elegir nuestro widget. Háganos saber si hay algo que le gustaría ver añadido en próximas versiones a través de PlayStore.</string>
+    <string name="tutorialTextSmall1">Aquí hay una sugerencia rápida para empezar, prueba a tocar en cualquier parte del widget para cambiar las vistas.</string>
+    <string name="tutorialTextStart">Presione a continuación para obtener algunos consejos rápidos!</string>
+</resources>

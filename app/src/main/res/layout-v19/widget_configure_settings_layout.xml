@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:gravity="center|top">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="78dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="center_vertical"
+            android:background="@color/colorPrimaryDark"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:paddingBottom="6dp"
+            android:text="Location"
+            android:textColor="#ffffff"
+            android:textSize="30dp" />
+        <TextView
+            android:id="@+id/locationLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="33dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="35dp"
+            android:paddingBottom="35dp"
+            android:textColor="@color/widgetPrimaryTextColorGrey"
+            android:text="Using current location."
+            android:textSize="12dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@drawable/white_rounded_rect"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="20dp"
+            android:gravity="center">
+
+            <Space
+                android:visibility="gone"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="0.1"/>
+
+            <TextView
+                android:id="@+id/pickLocationButton"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Pick Location"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:paddingTop="15dp"
+                android:paddingBottom="16dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:background="@drawable/location_button_drawable"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="78dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical"
+            android:background="@color/colorPrimaryDark"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:text="UI"
+            android:textColor="#ffffff"
+            android:textSize="30dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Use Fahrenheit"
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <com.ndcubed.nappsupport.views.RoundedSwitch
+                android:id="@+id/fahrenheitToggle"
+                android:layout_width="58dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="15dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Always use day icons."
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <com.ndcubed.nappsupport.views.RoundedSwitch
+                android:id="@+id/alwaysDayIconToggle"
+                android:layout_width="58dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="15dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Use day icons for weekly forecast."
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <com.ndcubed.nappsupport.views.RoundedSwitch
+                android:id="@+id/weekDayIconToggle"
+                android:layout_width="58dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="15dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginBottom="35dp"
+            android:layout_marginTop="35dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Widget Transparency:"
+                android:layout_marginBottom="23dp"
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <RelativeLayout
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:textColor="@color/widgetPrimaryTextColorGrey"
+                    android:textStyle="bold"
+                    android:gravity="center">
+                    <View
+                        android:id="@+id/widgetTransparencyPreview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rounded_rect"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp">
+                        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                        android:orientation="vertical"
+                                        android:layout_weight="1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/weather1"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/simple_partly_cloudy"
+                                android:scaleType="fitXY"
+                                android:adjustViewBounds="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:paddingBottom="23dp"
+                                android:paddingTop="23dp"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_centerInParent="true"
+                                android:layout_alignBottom="@+id/weather1">
+                                <TextView
+                                    android:id="@+id/tempPrevLabel1"
+                                    android:gravity="center"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/widgetPrimaryTextColorGrey"
+                                    android:textStyle="bold"
+                                    android:textSize="12dp"
+                                    android:text="70°"/>
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/timePrevLabel1"
+                                android:layout_centerInParent="true"
+                                android:layout_alignTop="@+id/weather1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/widgetPrimaryTextColorGrey"
+                                android:textStyle="bold"
+                                android:textSize="12sp"
+                                android:text="12 PM"/>
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <SeekBar
+                    android:id="@+id/transparencySeekBar"
+                    android:progressDrawable="@drawable/seek_bar_track_drawable"
+                    android:thumb="@drawable/seek_bar_handle_drawable"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="15dp"
+                    android:maxHeight="5dp"
+                    android:max="255"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Widget Text Color:"
+                android:layout_marginBottom="23dp"
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <RelativeLayout
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:textColor="@color/widgetPrimaryTextColorGrey"
+                    android:textStyle="bold"
+                    android:gravity="center">
+                    <View
+                        android:id="@+id/textColorTransparencyPreview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rounded_rect"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp">
+                        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                        android:orientation="vertical"
+                                        android:layout_weight="1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/weather2"
+                                android:contentDescription="@string/app_name"
+                                android:src="@drawable/simple_partly_cloudy"
+                                android:scaleType="fitXY"
+                                android:adjustViewBounds="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:paddingBottom="23dp"
+                                android:paddingTop="23dp"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_centerInParent="true"
+                                android:layout_alignBottom="@+id/weather2">
+                                <TextView
+                                    android:id="@+id/tempPrevLabel2"
+                                    android:gravity="center"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/widgetPrimaryTextColorGrey"
+                                    android:textStyle="bold"
+                                    android:textSize="12dp"
+                                    android:text="70°"/>
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/timePrevLabel2"
+                                android:layout_centerInParent="true"
+                                android:layout_alignTop="@+id/weather2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/widgetPrimaryTextColorGrey"
+                                android:textStyle="bold"
+                                android:textSize="12sp"
+                                android:text="12 PM"/>
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <SeekBar
+                    android:id="@+id/textColorSeekBar"
+                    android:progressDrawable="@drawable/seek_bar_track_drawable"
+                    android:thumb="@drawable/seek_bar_handle_drawable"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="15dp"
+                    android:maxHeight="5dp"
+                    android:max="255"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="78dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical"
+            android:background="@color/colorPrimaryDark"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:text="Refresh"
+            android:textColor="#ffffff"
+            android:textSize="30dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Use current location."
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <com.ndcubed.nappsupport.views.RoundedSwitch
+                android:id="@+id/useLocationToggle"
+                android:layout_width="58dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="15dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Auto refresh every 30 min."
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <com.ndcubed.nappsupport.views.RoundedSwitch
+                android:id="@+id/refreshToggle"
+                android:layout_width="58dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="15dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Weather Notifications"
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <com.ndcubed.nappsupport.views.RoundedSwitch
+                android:id="@+id/weatherNotificationToggle"
+                android:layout_width="58dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="15dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Update Notifications"
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <com.ndcubed.nappsupport.views.RoundedSwitch
+                android:id="@+id/updateNotificationsSwitch"
+                android:layout_width="58dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="15dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:background="#00000000" />
+
+    </LinearLayout>
+
+</ScrollView>

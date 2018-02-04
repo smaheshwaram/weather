@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="actionBarColor" format="color"/>
+
+    <attr name="weatherPrimaryColor" format="color"/>
+    <attr name="weatherHighlightColor" format="color"/>
+    <attr name="weatherAccentColor" format="color"/>
+
+    <attr name="widgetPrimaryTextColor" format="color"/>
+    <attr name="dropletDrawable" format="reference"/>
+    <attr name="temperatureIconDrawable" format="reference"/>
+</resources>

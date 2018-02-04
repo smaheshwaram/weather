@@ -1,0 +1,4 @@
+include ':app'
+include ':NAppSupport'
+
+project(':NAppSupport').projectDir = new File("../NAppSupport/library")

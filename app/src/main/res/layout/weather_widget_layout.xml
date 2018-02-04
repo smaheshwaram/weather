@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top|center">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:background="@drawable/top_rounded_rect">
+
+        <LinearLayout
+            android:id="@+id/refreshButton"
+            android:orientation="horizontal"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginRight="9dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/refresh_icon"/>
+
+        <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/refreshProgressView"
+            android:indeterminateTint="@color/colorPrimaryDark"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:indeterminate="true"
+            android:layout_centerInParent="true"/>
+
+        <LinearLayout
+            android:id="@+id/contentView"
+            android:paddingLeft="10dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/weatherIcon"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/sunny_large"
+                android:scaleType="fitStart"
+                android:adjustViewBounds="true"
+                android:layout_weight="0.2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:layout_width="0dp"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="0.4"/>
+                <TextView
+                    android:id="@+id/tempText"
+                    android:gravity="right"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#637185"
+                    android:textStyle="normal"
+                    android:textSize="45dp"
+                    android:text="79°"/>
+                <TextView
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="2dp"
+                    android:id="@+id/conditionText"
+                    android:gravity="left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#637185"
+                    android:textStyle="normal"
+                    android:textSize="25dp"
+                    android:text="Mostly Cloudy"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="0.5"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:id="@+id/hourlyForecastContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:background="@drawable/widget_background_bottom">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/weather1"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/sunny"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:paddingBottom="23dp"
+                android:paddingTop="23dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:layout_alignBottom="@+id/weather1">
+                <ImageView
+                    android:id="@+id/dropletIcon1"
+                    android:visibility="gone"
+                    android:layout_width="9dp"
+                    android:layout_height="13dp"
+                    android:layout_marginEnd="4dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/droplet_night"/>
+                <TextView
+                    android:id="@+id/label1"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/widgetPrimaryTextColorGrey"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:text="12p"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/time1"
+                android:layout_centerInParent="true"
+                android:layout_alignTop="@+id/weather1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/widgetPrimaryTextColorGrey"
+                android:textStyle="bold"
+                android:textSize="12dp"
+                android:text="12 PM"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_weight="0.4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#00000000"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"/>
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/weather2"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/sunny"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:paddingBottom="23dp"
+                android:paddingTop="23dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:layout_alignBottom="@+id/weather2">
+                <ImageView
+                    android:id="@+id/dropletIcon2"
+                    android:visibility="gone"
+                    android:layout_width="9dp"
+                    android:layout_height="13dp"
+                    android:layout_marginEnd="4dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/droplet_night"/>
+                <TextView
+                    android:id="@+id/label2"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/widgetPrimaryTextColorGrey"
+                    android:textStyle="bold"
+                    android:textSize="12dp"
+                    android:text="12p"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/time2"
+                android:layout_centerInParent="true"
+                android:layout_alignTop="@+id/weather2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/widgetPrimaryTextColorGrey"
+                android:textStyle="bold"
+                android:textSize="12dp"
+                android:text="12 PM"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_weight="0.4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#00000000"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"/>
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/weather3"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/sunny"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:paddingBottom="23dp"
+                android:paddingTop="23dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:layout_alignBottom="@+id/weather3">
+                <ImageView
+                    android:id="@+id/dropletIcon3"
+                    android:visibility="gone"
+                    android:layout_width="9dp"
+                    android:layout_height="13dp"
+                    android:layout_marginEnd="4dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/droplet_night"/>
+                <TextView
+                    android:id="@+id/label3"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/widgetPrimaryTextColorGrey"
+                    android:textStyle="bold"
+                    android:textSize="12dp"
+                    android:text="12p"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/time3"
+                android:layout_centerInParent="true"
+                android:layout_alignTop="@+id/weather3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/widgetPrimaryTextColorGrey"
+                android:textStyle="bold"
+                android:textSize="12dp"
+                android:text="12 PM"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_weight="0.4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#00000000"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"/>
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/weather4"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/sunny"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:paddingBottom="23dp"
+                android:paddingTop="23dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:layout_alignBottom="@+id/weather4">
+                <ImageView
+                    android:id="@+id/dropletIcon4"
+                    android:visibility="gone"
+                    android:layout_width="9dp"
+                    android:layout_height="13dp"
+                    android:layout_marginEnd="4dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/droplet_night"/>
+                <TextView
+                    android:id="@+id/label4"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/widgetPrimaryTextColorGrey"
+                    android:textStyle="bold"
+                    android:textSize="12dp"
+                    android:text="12p"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/time4"
+                android:layout_centerInParent="true"
+                android:layout_alignTop="@+id/weather4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/widgetPrimaryTextColorGrey"
+                android:textStyle="bold"
+                android:textSize="12dp"
+                android:text="12 PM"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_weight="0.4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#00000000"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"/>
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/weather5"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/sunny"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:paddingBottom="23dp"
+                android:paddingTop="23dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:layout_alignBottom="@+id/weather5">
+                <ImageView
+                    android:id="@+id/dropletIcon5"
+                    android:visibility="gone"
+                    android:layout_width="9dp"
+                    android:layout_height="13dp"
+                    android:layout_marginEnd="4dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/droplet_night"/>
+                <TextView
+                    android:id="@+id/label5"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/widgetPrimaryTextColorGrey"
+                    android:textStyle="bold"
+                    android:textSize="12dp"
+                    android:text="12p"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/time5"
+                android:layout_centerInParent="true"
+                android:layout_alignTop="@+id/weather5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/widgetPrimaryTextColorGrey"
+                android:textStyle="bold"
+                android:textSize="12dp"
+                android:text="12 PM"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

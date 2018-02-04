@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="tutorialText1">Tap anywhere on the lower half of the widget to toggle between useful information such as hourly forecasts, current conditions, and your 5 day forecast.</string>
+    <string name="tutorialText2">Tap anywhere on the upper half of the widget to refresh it. The widget can be set to automatically update through the settings.</string>
+    <string name="tutorialText3">Tap the gear icon in the upper right corner of the widget to change various settings such as your location, unit types, and icons.</string>
+    <string name="tutorialText4">Thanks for choosing our widget! Let us know if there\'s anything you\'d like to see added in upcoming releases through the PlayStore.</string>
+    <string name="tutorialTextSmall1">Here\'s a quick tip to get you started, try tapping anywhere on the widget to change views.</string>
+    <string name="tutorialTextStart">Press next for some quick tips!</string>
+
+    <string name="tutorialButtonFinishText">Let\'s Go!</string>
+    <string name="tutorialNextText">Next</string>
+</resources>

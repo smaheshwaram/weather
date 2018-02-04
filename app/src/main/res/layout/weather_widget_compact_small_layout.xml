@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="top|center"
+    android:id="@+id/rootView">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/widget_rounded_drawable">
+
+        <LinearLayout
+            android:id="@+id/refreshButton"
+            android:orientation="horizontal"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginRight="9dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/refresh_icon"/>
+
+        <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/refreshProgressView"
+            android:indeterminateTint="@color/colorPrimaryDark"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:indeterminate="true"
+            android:layout_centerInParent="true"/>
+
+        <LinearLayout
+            android:id="@+id/contentView"
+            android:paddingLeft="10dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/weatherIcon"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/sunny_large"
+                android:scaleType="fitStart"
+                android:adjustViewBounds="true"
+                android:layout_weight="0.15"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_width="0dp"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="0.5"/>
+                <TextView
+                    android:id="@+id/tempText"
+                    android:gravity="right"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#637185"
+                    android:textStyle="normal"
+                    android:textSize="25dp"
+                    android:text="79°"/>
+                <TextView
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="2dp"
+                    android:id="@+id/conditionText"
+                    android:gravity="left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#637185"
+                    android:textStyle="normal"
+                    android:textSize="15dp"
+                    android:text="Mostly Cloudy"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="0.5"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,59 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="DayTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/dayHighlightColor</item>
+
+        <item name="weatherPrimaryColor">@color/dayPrimaryColor</item>
+        <item name="weatherHighlightColor">@color/dayHighlightColor</item>
+        <item name="weatherAccentColor">@color/dayAccentColor</item>
+        <item name="dropletDrawable">@drawable/droplet</item>
+        <item name="temperatureIconDrawable">@drawable/temperature_icon</item>
+
+        <item name="widgetPrimaryTextColor">@color/widgetPrimaryTextColorGrey</item>
+
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="actionBarColor">@color/dayHighlightColor</item>
+    </style>
+
+    <style name="NightTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/dayHighlightColor</item>
+        <item name="colorPrimaryDark">@color/dayHighlightColor</item>
+        <item name="colorAccent">@color/dayHighlightColor</item>
+
+        <item name="weatherPrimaryColor">@color/nightPrimaryColor</item>
+        <item name="weatherHighlightColor">@color/nightHighlightColor</item>
+        <item name="weatherAccentColor">@color/nightAccentColor</item>
+        <item name="dropletDrawable">@drawable/droplet_night</item>
+        <item name="temperatureIconDrawable">@drawable/temperature_icon_night</item>
+
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="actionBarColor">@color/nightHighlightColor</item>
+    </style>
+
+    <style name="DayTheme2" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/dayHighlightColor</item>
+        <item name="colorPrimaryDark">@color/dayHighlightColor</item>
+        <item name="colorAccent">@color/dayHighlightColor</item>
+
+        <item name="weatherPrimaryColor">@color/dayPrimaryColor</item>
+        <item name="weatherHighlightColor">@color/dayHighlightColor</item>
+        <item name="weatherAccentColor">@color/dayAccentColor</item>
+        <item name="dropletDrawable">@drawable/droplet</item>
+        <item name="temperatureIconDrawable">@drawable/temperature_icon</item>
+
+        <item name="widgetPrimaryTextColor">@color/widgetPrimaryTextColorGrey</item>
+
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="actionBarColor">@color/dayHighlightColor</item>
+    </style>
+
+</resources>
